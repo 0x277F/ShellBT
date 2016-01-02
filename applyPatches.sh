@@ -36,4 +36,3 @@ function applyPatch {
 }
 
 applyPatch Bukkit Spigot-API HEAD && applyPatch CraftBukkit Spigot-Server patched
-#applyPatch Spigot-API MyFork-API HEAD && applyPatch Spigot-Server MyFork-Server HEAD
