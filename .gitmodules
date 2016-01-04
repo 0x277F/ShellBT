@@ -1,9 +1,12 @@
 [submodule "Bukkit"]
-	path = Bukkit
+	path = Spigot/Bukkit
 	url = https://hub.spigotmc.org/stash/scm/spigot/bukkit.git
 [submodule "CraftBukkit"]
-	path = CraftBukkit
+	path = Spigot/CraftBukkit
 	url = https://hub.spigotmc.org/stash/scm/spigot/craftbukkit.git
 [submodule "BuildData"]
-	path = BuildData
+	path = Spigot/BuildData
 	url = https://hub.spigotmc.org/stash/scm/spigot/builddata.git
+[submodule "Spigot"]
+	path = Spigot
+	url = https://hub.spigotmc.org/stash/scm/spigot/spigot.git
