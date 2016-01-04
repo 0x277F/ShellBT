@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+cd $basedir
 workdir=$basedir/work
 minecraftversion=$(cat BuildData/info.json | grep minecraftVersion | cut -d '"' -f 4)
 minecrafthash=$(cat BuildData/info.json | grep minecraftHash | cut -d '"' -f 4)
@@ -68,3 +69,4 @@ if [ "$?" != "0" ]; then
     echo "Failed to install remapped jar."
     exit 1
 fi
+cd ..

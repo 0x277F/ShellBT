@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+cd $basedir
 echo "Rebuilding patch files from current fork state..."
 git config core.safecrlf false
 
@@ -40,3 +41,4 @@ if [ "$1" == "clean" ]; then
 fi
 savePatches Bukkit Spigot-API
 savePatches CraftBukkit Spigot-Server
+cd ..

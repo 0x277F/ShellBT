@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+cd $basedir
 workdir=$basedir/work
 minecraftversion=$(cat BuildData/info.json | grep minecraftVersion | cut -d '"' -f 4)
 decompiledir=$workdir/$minecraftversion
@@ -28,3 +29,4 @@ if [ ! -d "$decompiledir/net/minecraft/server" ]; then
         exit 1
     fi
 fi
+cd ..

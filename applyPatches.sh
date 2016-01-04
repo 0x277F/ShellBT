@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+cd $basedir
 echo "Rebuilding Forked projects.... "
 
 function applyPatch {
@@ -36,3 +37,5 @@ function applyPatch {
 }
 
 applyPatch Bukkit Spigot-API HEAD && applyPatch CraftBukkit Spigot-Server patched
+#Working on your own fork? Then this is where you could add another statement similar to the above.
+cd ..

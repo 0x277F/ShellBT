@@ -1,7 +1,8 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+cd $basedir
 
 function update {
     cd "$basedir/$1"
@@ -12,3 +13,4 @@ function update {
 
 update Bukkit
 update CraftBukkit
+cd ..

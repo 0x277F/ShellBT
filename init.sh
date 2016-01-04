@@ -1,7 +1,9 @@
 #!/bin/bash
 
 PS1="$"
-basedir=`pwd`
+basedir=`pwd`/Spigot
+#Just in case
+cd $basedir
 workdir=$basedir/work
 minecraftversion=$(cat BuildData/info.json | grep minecraftVersion | cut -d '"' -f 4)
 decompiledir=$workdir/$minecraftversion
@@ -33,3 +35,4 @@ done
 git add src >/dev/null 2>&1
 git commit -m "CraftBukkit $ $(date)" >/dev/null 2>&1
 git checkout -f HEAD^ >/dev/null 2>&1
+cd ..
