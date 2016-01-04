@@ -1,6 +1,14 @@
 #!/bin/bash
 basedir=`pwd`
-git submodule add -f https://hub.spigotmc.org/stash/scm/spigot/spigot.git Spigot
+cd Spigot
+if [ ! -d "$basedir/Spigot/.git" ]; then
+    git init
+    git remote add -f origin https://hub.spigotmc.org/stash/scm/spigot/spigot.git
+fi
+git fetch
+git checkout -t origin/master
+cd $basedir
+
 git submodule update --init
 ./remap.sh && ./decompile.sh && ./init.sh && ./applyPatches.sh && mvn -f Spigot/pom.xml clean install
 cp Spigot/Spigot-API/target/spigot-*-SNAPSHOT.jar $basedir
